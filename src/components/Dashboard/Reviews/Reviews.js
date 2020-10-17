@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
@@ -8,6 +8,7 @@ const Reviews = () => {
     const { user } = useContext(UserContext);
 	const [loggedInUser, setLoggedInUser] = user;
     const { register, handleSubmit, errors } = useForm();
+    const formRef = useRef();
 
     // const src = loggedInUser.image;
 
@@ -43,7 +44,7 @@ const Reviews = () => {
 
                 <div className="d-flex mt-5 p-4" style={{ height: '700px', width: '100%', background: '#F4F7FC' }}>
 
-                    <form className="p-5 w-100 col-md-8 col-sm-12" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="p-5 w-100 col-md-8 col-sm-12" ref={formRef} onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-group">
                             <input style={{ height: '50px' }} type="text" ref={register({ required: true })} name="name" className="form-control" placeholder="Your name" />

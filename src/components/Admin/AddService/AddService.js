@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { UserContext } from '../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
@@ -11,6 +11,7 @@ const AddService = () => {
     // const { name, email, photoURL } = loggedInUser;
 
     const { register, handleSubmit, errors } = useForm();
+    const formRef = useRef();
 
     const onSubmit = data => {
         fetch('https://mighty-ravine-85440.herokuapp.com/addServices', {
@@ -38,7 +39,7 @@ const AddService = () => {
                 </div>
                 <div className="d-flex mt-5 p-4" style={{ height: '700px', width: '100%', background: '#F4F7FC' }}>
 
-                    <form className="bg-white h-75 w-100 p-3" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="bg-white h-75 w-100 p-3" ref={formRef} onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-group">
                             <div className="form-row">

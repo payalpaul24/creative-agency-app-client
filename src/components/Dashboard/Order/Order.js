@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
@@ -10,6 +10,7 @@ const Order = () => {
 
 
     const { register, handleSubmit, errors } = useForm();
+    const formRef = useRef();
 
     const onSubmit = data => {
         fetch('https://mighty-ravine-85440.herokuapp.com/placeOrder', {
@@ -39,7 +40,7 @@ const Order = () => {
 
                 <div className="d-flex mt-5 p-3" style={{ height: '700px', width: '100%', background: '#F4F7FC' }}>
 
-                    <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="p-5" ref={formRef} onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-group">
                             <input style={{ height: '50px' }} type="text" ref={register({ required: true })} name="name" className="form-control" placeholder="Your name / company’s name" />

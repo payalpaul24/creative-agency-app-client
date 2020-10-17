@@ -4,7 +4,7 @@ import customerOne from '../../../images/customerOne.png';
 const ClientFeedBackDetail = ({reviews}) => {
     console.log(reviews);
     return (
-        <div style={{border: '1px solid #BFBFBF',boxShadow: '3px 3px 5px lightgray'}} className="card text-center mb-4 p-4">
+        <div style={{border: '1px solid #BFBFBF',boxShadow: '3px 3px 5px lightgray'}} className="card col-md-4 text-center mb-4 p-4">
             <div className="d-flex align-items-left">
                 <img style={{width:'64px',height:'62px'}} src={customerOne} alt=""/>
                 <div className="ml-2 card-title">
