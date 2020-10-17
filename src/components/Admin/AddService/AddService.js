@@ -2,6 +2,7 @@ import React, { useContext, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { UserContext } from '../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
+import AdminSidebar from '../AdminSidebar/AdminSidebar';
 
 const AddService = () => {
 
@@ -32,10 +33,10 @@ const AddService = () => {
     return (
         <div className="d-flex col-sm-12">
 
-            <Sidebar></Sidebar>
+            <AdminSidebar></AdminSidebar>
             <div className="" style={{ height: '700px', width: '100%', marginTop: '100px' }}>
                 <div className="">
-                    <h4 className="">Order</h4>
+                    <h4 className="">Add Service</h4>
                 </div>
                 <div className="d-flex mt-5 p-4" style={{ height: '700px', width: '100%', background: '#F4F7FC' }}>
 
