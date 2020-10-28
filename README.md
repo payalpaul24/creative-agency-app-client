@@ -1,7 +1,7 @@
 # 🚀 Creative Agency Client
 [Live Site](https://creative-agency-7af02.web.app/).
 
-### This site working with Online educational service
+### This site is working with Online educational service
 ### Where an user can register any services with login system When a user logs in, they will go to the user dashboard.
 ### Where user see his/her details on user dashboard.
 ### Where an user order any services its only show who login in site , But its control also an admin.
